@@ -1,0 +1,13 @@
+.app-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical */
+  align-items: center;     /* horizontal */
+  height: 100vh;           /* full viewport height */
+  text-align: center;
+}
