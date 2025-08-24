@@ -1,0 +1,16 @@
+.centered {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically */
+  height: 100vh;           /* makes the div fill viewport height */
+  flex-direction: column;  /* stack children vertically */
+}
+
+#title{
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+#choice{
+    font-size: 20px;
+}
