@@ -1,31 +1,22 @@
-import { useState } from "react";
+// src/App.jsx
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import MealPicker from "./pages/MealPicker";
+import WeeklyPlan from "./pages/WeeklyPlan";
+import "./App.css";
 import "./index.css";
 
 function App() {
-  const [meal, setMeal] = useState("");
-
-  const getMeal = async () => {
-    const res = await fetch("http://127.0.0.1:5000/random-meal");
-    const data = await res.json();
-    setMeal(data.meal);
-  };
-
   return (
-    <div className="centered">
-      <div id="title">
-        What should I cook today?
-      </div>
+    <Router>
+      <Navbar />
 
-      <br />
-
-      <button onClick={getMeal} className="">
-        Pick a Meal
-      </button>
-
-      <br /> <br />
-
-      {meal && <div id = "choice">I should cook: <strong>{meal}</strong></div>}
-    </div>
+      <Routes>
+        <Route path="/" element={<MealPicker />} />
+        <Route path="/weekly-plan" element={<WeeklyPlan />} />
+      </Routes>
+    </Router>
   );
 }
 

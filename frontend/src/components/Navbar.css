@@ -1,0 +1,29 @@
+.navbar {
+    position: fixed;
+    /* stick it to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* full width */
+    background-color: #fffbeb;
+    /* dark background */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    /* horizontal layout */
+    justify-content: flex-start;
+    gap: 20px;
+    /* spacing between links */
+    z-index: 1000;
+    /* keep it above content */
+}
+
+.navitem{
+    color:black;
+}
+
+
+.navitem:hover {
+    color:black;
+  text-decoration: underline;
+}
